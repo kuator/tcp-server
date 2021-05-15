@@ -9,7 +9,7 @@ All the other devices are using private local IPs.
 2. Build a simple http server based on this tcp server
 
 Servers running
-![server and client](./server.png)
+![server and client](./server-and-client.png)
 
 Server first initializes LISTENING socket. Then client tries to connet, 
 socket accepts the connection and creates new ESTABLISHED socket. The client side,

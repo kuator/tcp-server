@@ -29,6 +29,12 @@ int main(){
     exit(0);
   }
 
+  int yes=1;
+
+  if (setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(yes)) == -1) {
+      exit(1);
+  }
+
   if ((listen(sockfd, 5)) == -1) {
        printf("Listen failed...\n");
        exit(0);
@@ -40,6 +46,8 @@ int main(){
      printf("server acccept failed...\n");
      exit(0);
   }
+
+  printf("%d", connfd);
   
   read(connfd, buff, sizeof(buff));
 
@@ -49,6 +57,8 @@ int main(){
   write(connfd, buff, sizeof(buff));
 
   memset(buff, 0, MESSAGE_LEN);
+
+  sleep(360);
 
   close(sockfd);
   close(connfd);

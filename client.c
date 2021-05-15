@@ -29,6 +29,7 @@ int main(){
     printf("ERROR connecting");
     exit(0);
   }
+  printf("%d", sockfd);
 
   strcpy(buff, "Hey hey people!");
   
@@ -40,6 +41,7 @@ int main(){
 
   printf("%s\n", buff);
   printf("%s", "Client reporting");
+  sleep(3600);
 
   close(sockfd);
 }

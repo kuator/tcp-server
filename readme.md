@@ -19,5 +19,6 @@ On the server side, the listening socket is associated with only a local IP and 
 In contrast, accepted sockets on the server (as well as connected sockets on the client) are identified by a local IP and port as well as a remote IP and port and is in the ESTABLISHED state.
 On the client side, it doesn't matter that the server uses a listening socket separate from the connected socket. By the time the client returns from connect, the server has returned from accept and the socket descriptors returned from each can communicate with each other.
 
-Running `netstat -an` shows us that stated above is actually true.
-![ports](./netstat.png)
+Running `netstat -an` shows us that stated above is actually true
+![ports](./ports.png)
+

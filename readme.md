@@ -20,4 +20,4 @@ In contrast, accepted sockets on the server (as well as connected sockets on the
 On the client side, it doesn't matter that the server uses a listening socket separate from the connected socket. By the time the client returns from connect, the server has returned from accept and the socket descriptors returned from each can communicate with each other.
 
 Running `netstat -an` shows us that stated above is actually true.
-![netstat](./netstat.png)
+![ports](./netstat.png)
